@@ -7,7 +7,7 @@ import VideojuegosPage from './pages/VideojuegosPage'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename='/2026-0.LoginApp-master/'>
+    <BrowserRouter basename='/2026-0.LoginApp-master'>
       <Routes>
         <Route path='/' element={ <LoginPage /> } />
         <Route path='/main' element={ <VideojuegosPage /> } />

@@ -3,6 +3,7 @@ import Cabecera from "../components/Cabecera"
 import Formulario from "../components/Formulario"
 import Mensaje from "../components/Mensaje"
 import { Link, useNavigate } from "react-router-dom"
+import params from "../params"
 
 function LoginPage() {
     const [mensajeVisible, setMensajeVisible] = useState(false)
@@ -21,7 +22,7 @@ function LoginPage() {
     }, [])
 
     async function loginHTTP(correo, password) {
-        const resp = await fetch("http://127.0.0.1:8000/login", {
+        const resp = await fetch(`${params.BACKEND_URL}/login`, {
             method : "post",
             body : JSON.stringify({
                 username : correo,
